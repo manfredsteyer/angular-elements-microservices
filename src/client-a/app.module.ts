@@ -6,7 +6,6 @@ import { ClientAComponent } from './client-a.component';
 import { Page1Component } from './page1.component';
 import { Page2Component } from './page2.component';
 import { PushPipe } from './push.pipe';
-import { CustomHandlingStrategy } from "./url-handling.strategy";
 import { ClientAWidgetComponent } from "./client-a-widget.component";
 
 @NgModule({
@@ -25,9 +24,6 @@ import { ClientAWidgetComponent } from "./client-a-widget.component";
     Page2Component,
     ClientAWidgetComponent,
     PushPipe
-  ],
-  providers: [
-    // { provide: UrlHandlingStrategy, useClass: CustomHandlingStrategy }
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   entryComponents: [ClientAComponent, ClientAWidgetComponent] 

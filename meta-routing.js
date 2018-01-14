@@ -10,6 +10,7 @@ function go(url) {
 
     location.hash = url;
 
+    // This prevents flickering
     setTimeout(function() { 
         if (url.indexOf('/client-a/') == 0) {
             setDisplay('client-a', 'block');
@@ -23,6 +24,7 @@ function go(url) {
 }
 
 function init(defaultUrl) {
-    let url = location.hash.substr(1) || defaultUrl;
+    let url = location.hash.substr(1);
+    if (!url || url == "/") url = defaultUrl;
     go(url);
 }
