@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AngularElementsDemo2</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    client-a, client-b {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  
+  <a href="javascript:go('/client-a/page1')">Client-A / Page 1</a>
+  <a href="javascript:go('/client-a/page2')">Client-A / Page 2</a>
+  <a href="javascript:go('/client-b/page1')">Client-B / Page 1</a>
+  <a href="javascript:go('/client-b/page2')">Client-A / Page 2</a>
+
+  <p>&nbsp;</p>
+
+  <client-a></client-a>
+  <client-b></client-b>
+
+  <script src="dist/client-a.bundle.js"></script>
+  <script src="dist/client-b.bundle.js"></script>
+  <script src="./meta-routing.js"></script>
+  <script>
+        init('/client-a/page1');
+  </script>
+</body>
+</html>
